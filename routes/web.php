@@ -14,5 +14,15 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
+Route::get('/film', function () {
+    $film=[
+        'title'=>'Avengers',
+        'year'=>'2018',
+        'vote'=>[4],
+        'actors'=>['pinco','pallo','pallino']
+    ];
+    return view('film-list',$film);
+});
+
